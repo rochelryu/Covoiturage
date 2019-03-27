@@ -1,6 +1,6 @@
 import React from  'react'
-import {View, TextInput, StyleSheet, Image} from 'react-native'
-import {Item, Input, Label, Button } from 'native-base';
+import {View, TextInput, StyleSheet, Image, Button} from 'react-native'
+import {Item, Input, Label } from 'native-base';
 
 const styles = StyleSheet.create({
     container:{
@@ -40,10 +40,11 @@ const styles = StyleSheet.create({
 })
 
 export default class  LoginScreen extends React.Component {
-    constructor(){
-        super()
-    }
-
+    /*componentDidMount() {
+        Font.loadAsync({
+            'open-sans-bold': require('./assets/fonts/OpenSans-Bold.ttf'),
+        });
+    }*/
     render(){
         return(
             <View style={styles.container}>
@@ -52,10 +53,6 @@ export default class  LoginScreen extends React.Component {
                 </View>
                 <View style={styles.int}>
                     <View style={styles.block}>
-                        <TextInput
-                            style={styles.input}
-                            autoCorrect={false}
-                        />
                         <Item floatingLabel>
                             <Label>Username</Label>
                             <Input />
@@ -66,9 +63,7 @@ export default class  LoginScreen extends React.Component {
                         </Item>
                     </View>
                     <View style={styles.block}>
-                        <Button rounded light>
-                            <Text>Connexion</Text>
-                        </Button>
+                        <Button title="Connexion" color="#841584" />
                     </View>
                     <View style={styles.foot}>
                         Ou Connectez-vous avec
